@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button style</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: block;
+            background-image: url(ocean-2661830_1920.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .container {
+            text-align: center;
+            /* margin: 360px; */
+            display: flex;
+            justify-content: space-around;
+            /* align-items: center; */
+            /* background: rgba(0, 0, 0, 0.377); */
+            /* opacity: .4; */
+        }
+        
+        .btn {
+            font-size: 20px;
+            border: 2px solid darkblue;
+            background: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 10px;
+            transition: .9s;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 4px 10px 20px black;
+        }
+        
+        .btn1 a {
+            text-decoration: none;
+            /* color: white; */
+            color: none;
+        }
+        
+        .btn1 a:hover {
+            text-decoration: none;
+            color: white;
+            transition: .8s;
+        }
+        
+        .btn1 a,
+        .btn2 {
+            color: white;
+        }
+        
+        .btn3,
+        .btn4 {
+            color: white;
+        }
+        
+        .btn1:hover,
+        .btn2:hover {
+            color: white;
+        }
+        
+        .btn3:hover,
+        .btn4:hover {
+            color: rgb(38, 38, 165);
+        }
+        
+        .btn::before {
+            content: "";
+            position: absolute;
+            background: rgb(121, 5, 5);
+            left: 0;
+            height: 0%;
+            z-index: -1;
+            transition: .8s;
+            width: 100%;
+        }
+        
+        .btn1::before,
+        .btn3::before {
+            top: 0;
+            border-radius: 0 0 50% 50%;
+        }
+        
+        .btn2::before,
+        .btn4::before {
+            bottom: 0;
+            border-radius: 50% 50% 0 0;
+        }
+        
+        .btn3::before,
+        .btn4::before {
+            height: 188%;
+        }
+        
+        .btn1:hover::before,
+        .btn2:hover::before {
+            height: 180%;
+        }
+        
+        .btn3:hover::before,
+        .btn4:hover::before {
+            height: 0%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <button class="btn btn1"><a href="https://www.facebook.com" target="_blank">Hover me</button>
+        <button class="btn btn2">Hover me</button>
+        </a>
+        <button class="btn btn3">Hover me</button>
+        <button class="btn btn4">Hover me</button>
+    </div>
+</body>
+
+</html>
